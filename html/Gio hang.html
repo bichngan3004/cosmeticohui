@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+        .container{
+            margin-top: 5px;
+        }
+       nav li a{
+           padding: 20px;
+           color:  black;
+           margin-left: 30px;
+       }
+       h3{
+           color: red;
+       }
+      #erhoten,#ersdt{
+          color: red;
+          font-style: italic;
+      }
+        
+    </style>
+    <script>
+        var i=0;
+        function duong(){
+            i++;
+            document.getElementById("sl").value=i;
+        }
+        function am(){
+          if(i<=0){
+              document.getElementById("sl").value=0;
+          }
+          else{
+              i--;
+            document.getElementById("sl").value = i;
+          }
+        }
+
+
+
+         //kiểm tra họ tên
+         function kiemtrahoten(){
+            var hoten = document.getElementById("txthoten").value;
+            var reg = /^([A-Z]{1}[a-z]*\s)*([A-Z]{1}[a-z]*)$/;
+            if(reg.test(hoten)){
+                document.getElementById("erhoten").innerHTML = "(*)";
+            }
+            else{
+                document.getElementById("erhoten").innerHTML = "(*) Họ và tên không đúng"
+            }
+        }
+         //kiem tra so dien thoai
+         function kiemtrasdt(){
+            var sdt = document.getElementById("txtdt").value;
+            var reg = /^(0)[0-9]{9}$/;
+            if(reg.test(sdt)){
+                document.getElementById("ersdt").innerHTML = "(*)";
+            }
+            else{
+                document.getElementById("ersdt").innerHTML = "(*) So dien thoai khong hop le";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row" >
+            <div class="container">
+                <div class=" col-md-12 ">
+            
+                    <nav class="navbar navbar-expand-sm ">
+
+                        <!-- Links -->
+                    
+                        <ul class="navbar-nav">
+                        <li> <i class="fa fa-phone"></i> HOTLINE:(08) 66 85 85 38</li>
+                        <li class="nav-item">
+                            <a href="#"><i class="fa fa-pencil-square-o"></i> Kiểm tra đơn hàng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Gio hang.html"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Dang nhap.html"><i class="fa fa-sign-in"></i> Đăng nhập </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Dang ky.html"><i class="fa fa-key"></i> Đăng ký </a>
+                        </li>
+                        </ul>
+                    
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col-7">
+                    <img src="../images/logo.png" alt="">
+                </div>
+               <div class="col-5" style="margin-top: 10px;">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm" aria-label="Search" >
+                       <button class="btn btn-default"><i class="fa fa-search"></i></button>
+                      </form>
+                </div>
+            </div>
+        </div>
+        <!--nav-->
+        
+            <div class="row" style="background-color: gray;">
+                <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-dark ">
+                    <a class="navbar-brand" href="Gio hang.html">SITE-MAP</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="Trang chu.html">TRANG CHỦ <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="Gioi thieu.html">GIỚI THIỆU</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           SẢN PHẨM
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="Trang diem.html">OHUI Trang điểm</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="Lam sach.html">OHUI Làm sạch</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="Trang da.html">OHUI Trắng da</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="Tai sinh da.html">OHUI Tái sinh da</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="Chong nang.html">OHUI Chống nắng</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="Duong da.html">OHUI Dưỡng da</a>
+                          </div>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link " href="Tin tuc.html">TIN TỨC</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="Lien he.html">LIÊN HỆ</a>
+                          </li>
+                      </ul>
+                  </nav>
+                 </div>
+                 </div>
+          
+       
+       
+
+
+    <!--Sản phẩm-->
+    <div class="container">
+       <div class="row">
+           <div class="col-sm-12 col-md-3">
+                <h4>Thông tin mua hàng</h4>
+                <form action="">
+                    <div class="form-group">
+                        <label for="">Họ tên</label>
+                        <input type="text" name="" id="txthoten" onblur="kiemtrahoten()" class="form-control" placeholder="Họ tên">
+                        <div id="erhoten"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Điện thoại</label>
+                        <input type="phone" name="" id="txtdt" onblur="kiemtrasdt()" class="form-control" placeholder="Số điện thoại">
+                        <div id="ersdt"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Địa chỉ nhận hàng</label>
+                        <input type="text" name="" id="" class="form-control" placeholder="Địa chỉ nhận hàng">
+                    </div>
+                    <div class="form-group">
+                        
+                        <input type="button" name="" id="" class="btn btn-success" value="Xác nhận">
+                    </div>
+                    
+                </form>
+           </div>
+           <div class="col-sm-12 col-md-9 ">
+                <table class="table table-hover  table-condensed">
+                    <tr>
+                        <th style="width:47%">Tên sản phẩm</th>
+                        <th style="width:13%">Số lượng</th>
+                        <th style="width:12.5%">Giá</th>
+                        <th style="width:12.5%">Thành tiền</th>
+                        <th style="width:13%"></th>
+                    </tr>
+                    <tr>
+                        <td data-th="product">
+                            <div class="row">
+                                <div class="col-3">
+                                    <img src="../images/td4.png" alt="" width="100px" height="100px">
+                                </div>
+                                <div class="col-9">
+                                    <h4 >OHUI EYESHADOW</h4> 
+                                    
+                                </div>
+                            </div>
+                        </td>
+                        <td data-th="sl" >
+                            <div class="row form-group-inline">
+                                <input type="button" value="-" onclick="am()" class="form-control col-4 btn btn-light text-center" >
+                                <input type="text" name="" id="sl" value="0" class="form-control col-4 text-center" >
+                                <input type="button" value="+" onclick="duong()" class="form-control col-4 btn btn-light text-center"  >
+                            </div> 
+                            
+                        </td>
+                        <td data-th="gia" >
+                            <p>1.100.000 <sup><u>đ</u></sup></p>
+                        </td>
+                        <td data-th="tt" >
+                            <p>1.100.000 <sup><u>đ</u></sup></p>
+                        </td>
+                        <td data-th="" >
+                            <button class="btn btn-info" ><i class="fa fa-edit"></i></button>
+                            <button class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
+                        </td>
+                    </tr>
+                </table> 
+
+            </div>
+
+           </div>
+       </div>
+       
+     </div>
+
+
+     <div class="container">
+        <div class="row" style="margin-top:30px">
+            <div class="col">
+                <img src="../images/dt1.png" alt="">
+            </div>
+            <div class="col">
+                <img src="../images/dt2.png" alt="">
+            </div>
+            <div class="col">
+                <img src="../images/dt3.png" alt="">
+            </div>
+            <div class="col">
+                <img src="../images/dt4.png" alt="">           
+            </div>
+            <div class="col">
+                <img src="../images/dt5.png" alt="">
+            </div>
+            <div class="col">
+                <img src="../images/dt6.png" alt="">
+            </div>
+    
+        </div>
+    </div>
+
+<!--footer-->
+<div class="container-fluid">
+   
+    <div class="row" style="background-color: black; ">
+        <div class="container">
+        <div class="row">
+            <div class="col" id="fo">
+                <h4> GIỚI THIỆU</h4>
+                <p>Về chúng tôi</p>
+                <p>Lĩnh vực hoạt động</p>
+                <p>Hỏi đáp</p>
+                <p>Quy chế hoạt động</p>
+                <p>Tuyển dụng</p>
+            </div>
+            <div class="col" id="fo">
+                <h4>TRỢ GIÚP</h4>
+                <p>Hướng dẫn thanh toán</p>
+                <p>Quy định đổi trả</p>
+                <p>Chính sách bán hàng</p>
+                <p>Chính sách bảo mật</p>
+                <p>Thảo luận</p>
+            </div>
+            <div class="col" id="fo">
+                <h4>THÔNG TIN CÔNG TY</h4>
+                <p>My Pham 3</p>
+                <p><i class="fa fa-map-marker"></i> Tận Định, Q.1, TP.HCM</p>
+                <p> <i class="fa fa-envelope"></i>
+                    <a href="mailto:info@runtime.vn">info@runtime.vn</a></i>
+                </p>
+                <p><i class="fa fa-phone"></i>
+                    Phone: (08) 66 85 85 38</p>
+            </div>
+            <div class="col" id="fo">
+                <h4>FACEBOOK</h4>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="row"style="background-color: black;">
+        <div class="container" >
+            <div class="row">
+                <div class="col-6">
+                    <h2 style="color: white;">HOTLINE: (08) 66 85 85 38</h2>
+                </div>
+                <div class="col-6">
+                    <a href="#"> <i class="fa fa-facebook" style="font-size:24px;  color: white; "></i></a>
+                    <a href="#">  <i class="fa fa-instagram" style="font-size:24px; color: white; padding-left: 5px;"></i></a> 
+                    <a href="#"><i class="fa fa-pinterest" style="font-size:24px; color: white; padding-left: 5px;"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
